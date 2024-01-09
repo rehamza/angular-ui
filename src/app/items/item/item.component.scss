@@ -1,0 +1,19 @@
+.top-heading-wrapper {
+  font-size: 16px;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+.top-heading-left {
+  color: #102733;
+}
+
+.top-heading-right {
+  color: #74409d;
+
+  &::before {
+    content: '\2022'; 
+    color: #74409d;
+    margin-right: 0.3em;
+    margin-left: 0.3em;
+  }
+}

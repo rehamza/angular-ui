@@ -1,0 +1,37 @@
+.title {
+  color: #54237c;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  word-wrap: break-word;
+  // padding: 0.5rem;
+}
+.background {
+  background-color: #f9f7f6;
+  margin: 0px 5px 0px 5px;
+}
+.small-text {
+  color: #102733;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  word-wrap: break-word;
+}
+.medium-text {
+  color: #102733;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  word-wrap: break-word;
+}
+
+.form-check-input:checked {
+  background-color: #54237c;
+  border-color: #54237c;
+  box-shadow: 0 0 0 1px #54237c;
+}
+
+.form-check-input:focus {
+  border-color: #54237c;
+  box-shadow: 0 0 0 1px #54237c, 0 0 0 0.2rem rgba(147, 39, 255, 0.25);
+}

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { TabsComponent } from './tabs/tabs.component';
 
 @Component({
   selector: 'app-item-detail',
@@ -6,15 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./item-detail.component.scss'],
 })
 export class ItemDetailComponent {
-  items: any[] = [];
-
   constructor() {}
 
-  ngOnInit(): void {
-    this.items = [
-      { id: 1, name: 'Item 1' },
-      { id: 2, name: 'Item 2' },
-      { id: 3, name: 'Item 3' },
-    ];
+  @ViewChild(TabsComponent) myTabsComponent: TabsComponent | undefined;
+
+  // tabs: string[] = ['Információk', 'Helyszín', 'Elérhetőség', 'Árak', 'Csomag tartalma', 'Képek', 'Haladó beállítások'];
+  // selectedIndex: number = 0;
+
+  ngAfterViewInit() {
+    if (this.myTabsComponent) {
+      console.log('Selected Index:', this.myTabsComponent.selectedIndex);
+    }
   }
 }

@@ -2,12 +2,17 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-  font-family: "Lexend", sans-serif;
+  font-family: 'Lexend', sans-serif;
   background-color: #f9f7f6;
   color: #102733;
   font-size: 16px;
-  // font-family: "Lexend";
   font-weight: 700;
-  text-transform: uppercase;
   word-wrap: break-word;
+}
+.purple {
+  color: #74409D;
+}
+.btn-purple {
+  background-color: #74409D;
+  color: #f9f7f6;
 }

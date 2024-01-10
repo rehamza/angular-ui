@@ -1,5 +1,61 @@
+<div class="nav-wrapper my-2">
+  <div class="row">
+    <div class="col-lg-6 col-sm">
+      <div class="d-flex flex-row">
+        <div class="p-2">
+          <img src="assets/images/rectangle.png" />
+        </div>
 
-
-<div style="width: 100%; height: 100%; background: white; border-radius: 16px">
-nav
+        <div class="p-2">
+          <h1 class="nav-heading">
+            Etyeki Kúria borkóstoló Magyarország legszebb birtokán
+          </h1>
+          <div class="d-flex flex-row" *ngIf="isTopShow">
+            <div class="nav-sub-text-left px-2">Etyeki kúria</div>
+            <div class="nav-sub-text-right px-2">Etyek, Etyek-Buda</div>
+          </div>
+        </div>
+      </div>
+        <div class="d-flex flex-row"  *ngIf="isBottomShow">
+          <div class="nav-sub-text-left px-2">Etyeki kúria</div>
+          <div class="nav-sub-text-right px-2">Etyek, Etyek-Buda</div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md">
+      <div class="row mx-1">
+        <div
+          class="col-md d-flex flex-row justify-content-center align-items-center p-2"
+        >
+          <label for="status mr-5">Sátusz:</label>
+          <select
+            class="border rounded nav-dropdown p-2"
+            id="myDropdown"
+            name="fruits"
+          >
+            <option value="apple">
+              <i class="fa-solid fa-arrow-left"></i> Publikálva
+            </option>
+            <option value="banana">item 1</option>
+            <option value="orange">item 2</option>
+            <option value="grape">item 3</option>
+          </select>
+        </div>
+        <div class="col-md d-flex flex-row p-2 justify-content-between">
+          <div>
+            <button class="btn btn-light m-1">
+              <i class="fa-solid fa-signal"></i>
+            </button>
+            <button class="btn btn-light m-1">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+          <div>
+            <button class="btn btn-light px-4 py-2 btn-purple rounded-3">
+              Előnézet
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

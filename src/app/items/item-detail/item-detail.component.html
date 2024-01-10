@@ -1,6 +1,121 @@
-<p>item-detail works!</p>
-<h2>Items detail</h2>
-<ul>
-  <li *ngFor="let item of items">{{ item.name }}</li>
-  abc
-</ul>
+<app-tabs
+  [tabs]="[
+    'Információk',
+    'Helyszín',
+    'Elérhetőség',
+    'Árak',
+    'Csomag tartalma',
+    'Képek',
+    'Haladó beállítások'
+  ]"
+>
+  <div *ngIf="myTabsComponent?.selectedIndex === 0">Content Információk</div>
+
+  <div *ngIf="myTabsComponent?.selectedIndex === 1">
+    <div class="row">
+      <h1 class="title">Borkóstoló helyszíne</h1>
+      <label for="status" class="small-text">Cím</label>
+      <select class="border rounded col-lg-6 col-12 p-2 m-2" id="myDropdown" name="fruits">
+        <option value="apple">
+          <i class="fa-solid fa-arrow-left"></i> Bár HU, 2091 Etyek, Báthori
+          utca 21.
+        </option>
+        <option value="banana">item 1</option>
+        <option value="orange">item 2</option>
+        <option value="grape">item 3</option>
+      </select>
+    </div>
+    <div class="row">
+      <h1 class="title">Megközelítés</h1>
+      <div class="row rounded background p-1 my-2 col-lg-9 col-12">
+        <div>
+          <input
+            class="form-check-input purple"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label medium-text mx-2" for="flexRadioDefault1">
+            GPS alapján könnyedén megközelíthető
+          </label>
+        </div>
+        <div>
+          <label class="small-text py-2" for="exampleInputEmail1"
+            >Pontos cím</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            value="2091 Etyek, Báthori utca 21."
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter phone number"
+          />
+        </div>
+      </div>
+      <div class="row rounded background p-1 my-2 col-lg-9 col-12">
+        <div>
+          <div>
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label medium-text mx-2" for="flexRadioDefault1">
+              Konkrét útmutatás megadása
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-check form-switch row m-2">
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          >A térkép eltüntetése a borkóstoló oldaláról</label
+        >
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckDefault"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <h1 class="title">Kapcsolat</h1>
+      <div class="form-group col-lg-6 col-12">
+        <label class="small-text py-2" for="exampleInputEmail1"
+          >Telefonszám</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          value="+36 20 1234 567"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Enter email"
+        />
+      </div>
+    </div>
+
+    <div class="d-flex flex-row my-5">
+      <button class="btn btn-outline-secondary px-4 py-2 rounded-3">
+        Mégsem
+      </button>
+      <button class="btn btn-light px-4 py-2 btn-purple rounded-3 mx-3">
+        Mentés
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="myTabsComponent?.selectedIndex === 2">Content Elérhetőség</div>
+  <div *ngIf="myTabsComponent?.selectedIndex === 3">Content Árak</div>
+  <div *ngIf="myTabsComponent?.selectedIndex === 4">
+    Content Csomag tartalma
+  </div>
+  <div *ngIf="myTabsComponent?.selectedIndex === 5">Content Képek</div>
+  <div *ngIf="myTabsComponent?.selectedIndex === 6">
+    Content Haladó beállítások
+  </div>
+</app-tabs>

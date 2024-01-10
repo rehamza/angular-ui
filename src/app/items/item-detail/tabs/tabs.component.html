@@ -1,0 +1,17 @@
+<div class="wrapper my-3">
+    <div class="tabs-container">
+      <div
+        *ngFor="let tab of tabs; let i = index"
+        (click)="selectTab(i)"
+        [class.selected]="selectedIndex === i"
+        class="tab"
+      >
+        {{ tab }}
+      </div>
+      <div class="tab-bar" [style.left.%]="barLeft"></div>
+    </div>
+    <div class="tab-content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+  
